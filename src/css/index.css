@@ -1,0 +1,282 @@
+/* General */
+:root {
+    --max-width: 1280px;
+    --min-width: 320px;
+    --accent-color: #00c2ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: roboto, sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.book-appointment {
+    background-color: var(--accent-color);
+    padding: 0rem 1rem;
+    font-size: 15px;
+}
+
+/* container */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-width: var(--min-width);
+    background-image: url("../img/background-01.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.7s ease-in-out;
+
+}
+
+.header,
+.content,
+.footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: var(--max-width);
+}
+
+/* header */
+.header {
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+
+}
+
+.logo img {
+    margin-right: 0.4rem;
+    width: 50px;
+    right: 50px;
+
+
+}
+
+.menu-lista {
+    margin: 0;
+
+
+}
+
+
+.color {
+    color: red;
+}
+
+
+.menu-lista__item {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 20px;
+
+}
+
+
+.menu-lista__item:last-child {
+    margin-right: 0;
+
+}
+
+/* content */
+.content {
+    flex-grow: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.slideButton {
+    position: absolute;
+    top: 37%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.prevSlide {
+    left: 1rem;
+    color: red;
+}
+
+.nextSlide {
+    right: 3rem;
+    color: red;
+}
+
+.content__claim {
+    font-size: 30px;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.content__subclaim {
+    font-size: 22px;
+    margin: 0.5rem 0;
+    margin-bottom: 1rem;
+}
+
+/* footer */
+.footer-wrapper {
+    height: 100px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__widget {
+    font-size: 15px;
+}
+
+.footer__widget__title {
+    color: var(--accent-color);
+    margin: 0 0 1rem 0;
+}
+
+.footer__widget__text {
+    margin: -12px;
+    
+}
+
+/* responsive stuff */
+
+@media (max-width: 900px) {
+
+  
+    
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container {
+        height: 100vh;
+        display: flex;
+        background-position: center;
+        flex-direction: column;
+        min-width: var(--min-width);
+        background-image: url("../img/background-01.jpg");
+        background-repeat: no-repeat;
+        height: 100%; 
+        background-size: cover;
+        background-size: 100% 100%;
+        transition: background-image 0.7s ease-in-out;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    
+   
+
+    .menu {
+        margin-top: 1.5rem;
+    }
+
+    .content {
+        align-items: center;
+    }
+
+    .footer__widget {
+        margin-bottom: 1rem;
+    }
+   
+  
+
+
+    
+}
+
+@media (max-width: 400px) {
+    .container {
+        height: 100vh;
+        display: flex;
+        background-position: center;
+        flex-direction: column;
+        min-width: var(--min-width);
+        background-image: url("../img/background-01.jpg");
+        background-repeat: no-repeat;
+        height: 107%; 
+        background-size: cover;
+        background-size: 100% 100%;
+        transition: background-image 0.7s ease-in-out;
+        overflow: hidden;
+        object-fit: cover;
+    
+    }
+   
+  .header, .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .footer-wrapper{
+        margin-bottom: 200px;
+    }
+    
+   
+
+}
+
+@media (max-width: 260px) {
+    .container {
+        height: 100vh;
+        display: flex;
+        background-position: center;
+        flex-direction: column;
+        min-width: var(--min-width);
+        background-image: url("../img/background-01.jpg");
+        background-repeat: no-repeat;
+        height: 128%; 
+        background-size: cover;
+        background-size: 100% 100%;
+        transition: background-image 0.7s ease-in-out;
+        overflow: hidden;
+        object-fit: cover;
+    
+    }
+   
+  .header, .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .footer-wrapper{
+        margin-bottom: 200px;
+    }
+    
+   
+
+}
